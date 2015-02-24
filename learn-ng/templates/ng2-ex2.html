@@ -5,10 +5,10 @@
   </div>
   <div>
     Favorite color:
-    <input type="radio" name="fc" value="Red" >Red</input>
-    <input type="radio" name="fc" value="Green" >Green</input>
-    <input type="radio" name="fc" value="Yellow" >Yellow</input>
-    <input type="radio" name="fc" value="Blue" >Blue</input>
+    <input type="radio" name="fc" value="Red" #red_radio (change)="updateFaveColor($event, red_radio.value)">Red</input>
+    <input type="radio" name="fc" value="Green" #green_radio (change)="updateFaveColor($event, green_radio.value)">Green</input>
+    <input type="radio" name="fc" value="Yellow" #yellow_radio (change)="updateFaveColor($event, yellow_radio.value)">Yellow</input>
+    <input type="radio" name="fc" value="Blue" #blue_radio (change)="updateFaveColor($event, blue_radio.value)">Blue</input>
     {{favoriteColor}}
   </div>
   <div>

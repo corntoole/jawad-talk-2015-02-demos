@@ -26,6 +26,14 @@ class HelloApp {
     // }
   }
 
+  updateFaveColor($event, newColor){
+    this.favoriteColor = newColor;
+  }
+
+  updateFaveShape($event, newShape){
+    this.favoriteShape = newShape;
+  }
+
 }
 export function main() {
   bootstrap(HelloApp);
