@@ -1,0 +1,40 @@
+<!doctype html>  
+<html lang="en" ng-app="root">  
+<head>  
+  <meta charset="utf-8">  
+  <title>Example 1</title>  
+  <meta name="description" content="Talk Example 1">  
+  <meta name="Cornelius Toole" content="corntoole.com">  
+    
+</head>  
+
+<body>  
+	<div ng-controller="index">
+    <div ng-controller="index">
+      <div>
+        Favorite word: <input type="text" ng-model="favoriteWord"/>
+        {{favoriteWord}} 
+      </div>
+      <div>
+        Favorite color:
+        <input type="radio" name="fc" value="Red" ng-model="favoriteColor">Red</input>
+        <input type="radio" name="fc" value="Green" ng-model="favoriteColor">Green</input>
+        <input type="radio" name="fc" value="Yellow" ng-model="favoriteColor">Yellow</input>
+        <input type="radio" name="fc" value="Blue" ng-model="favoriteColor">Blue</input>
+        {{favoriteColor}}
+      </div>
+      <div>
+        Favorite shape:
+        <select ng-model="favoriteShape">
+          <option value="Circle">Circle</option>
+          <option value="Triangle">Triangle</option>
+          <option value="Square">Square</option>
+        </select>
+        {{favoriteShape}}
+      </div>
+    </div>
+  </div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/root-ex2-ng1.js"></script>  
+</body>  
+</html>
