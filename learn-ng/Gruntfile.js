@@ -1,48 +1,50 @@
 module.exports = function (grunt) {
+// Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
 
+// Define the configuration for all the tasks
   grunt.initConfig({
-    jshint: {
-      files: ['Gruntfile.js', 'js/*.js'],
-      options: {
-        globals: {
-          jQuery: true
-        }
-      }
+    // Project settings
+    config: {
+      // Configurable paths
+      app: './'
     },
+    // Watches files for changes and runs tasks based on the changed files
     watch: {
-      options: { livereload: '<%= connect.options.livereload %>',
-        },
-      files: ['<%= jshint.files %>', '**/*.html'],
-      tasks: ['jshint']
+        livereload: {
+            options: {
+                livereload: '<%= connect.options.livereload %>'
+            },
+            files: [
+                '<%= config.app %>/{,*/}*.html',
+                '<%= config.app %>/{,*/}/js/*.js',
+                '.tmp/styles/{,*/}*.css',
+                '<%= config.app %>/images/{,*/}*'
+            ]
+        }
     },
+    // The actual grunt server settings
     connect: {
-      // server: {
         options: {
-          port: 8100,
-          livereload: 35729,
-          hostname: 'localhost',
-          keepalive: true
+            port: 9000,
+            livereload: 35729,
+            hostname: 'localhost'
         },
         livereload: {
-          options: true,
-          base: [
-            '.tmp',
-            './'
-          ]
-        }
-      // }
-    }
-  });
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-
-  grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('serve', function (target) {
+            options: {
+                open: true,
+                base: [
+                    '.tmp',
+                    '<%= config.app %>'
+                ]
+            }
+        },
+    },
+});
+grunt.registerTask('serve', function (target) {
     grunt.task.run([
         'connect:livereload',
         'watch'
         ]);
-  });
+    });
 };

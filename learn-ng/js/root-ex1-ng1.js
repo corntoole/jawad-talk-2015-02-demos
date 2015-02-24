@@ -1,4 +1,4 @@
 angular.module('root', [])
   .controller("index", function ($scope) {
-  	 $scope.message = "Hello Mississippi!";
+  	 $scope.message = "Hello Jxn Devs!";
   });
