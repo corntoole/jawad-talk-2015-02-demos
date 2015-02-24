@@ -1,0 +1,10 @@
+<style>@import "css/styles.css";</style>
+
+<div>
+  <input type="text" [value]="value" #new_value (keyup)="updateValue($event, new_value.value)"/>
+    <span [hidden]="value != 1" [red]>
+      Example Text
+    </span>
+    <p>class: {{class}}</p>
+    <p>{{value}}</p>
+</div>
