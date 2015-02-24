@@ -5,12 +5,16 @@ import {bind} from 'angular2/di';
   selector: 'hello-app',
   componentServices: [],
   template: new TemplateConfig({
-    inline: "<div>{{message}}</div>",
+    inline: "<div>{{greeting}}</div>",
     directives: []
   })
 })
 class HelloApp {
+  greeting: any;
 
+  constructor(){
+    this.greeting = "Hello Jxn Devs from the future!";
+  }
 }
 export function main() {
   bootstrap(HelloApp);
