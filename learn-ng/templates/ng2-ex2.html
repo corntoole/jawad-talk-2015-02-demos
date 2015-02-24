@@ -13,7 +13,7 @@
   </div>
   <div>
     Favorite shape:
-    <select >
+    <select #shape_option (change)="updateFaveShape($event, shape_option.value)">
       <option value="Circle">Circle</option>
       <option value="Triangle">Triangle</option>
       <option value="Square">Square</option>
