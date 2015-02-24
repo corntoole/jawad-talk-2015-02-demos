@@ -1,0 +1,21 @@
+{
+  "name": "learn-ng",
+  "version": "0.0.0",
+  "homepage": "https://github.com/corntoole/jawad-talk-2015-02-demos",
+  "authors": [
+    "Cornelius Toole <cornelius.toole@gmail.com>"
+  ],
+  "description": "Simple examples from learn-angular.org to demonstrate how ng2 is different from ng1.x",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
