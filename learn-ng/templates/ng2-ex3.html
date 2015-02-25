@@ -2,7 +2,7 @@
 
 <div>
   <input type="text" [value]="value" #new_value (keyup)="updateValue($event, new_value.value)"/>
-    <span [hidden]="value != 1" [red]>
+    <span [class.bold]="value % 2 == 0" [class.italic]="value % 3 == 0" [class.underline]="value % 5 == 0">
       Example Text
     </span>
     <p>class: {{class}}</p>

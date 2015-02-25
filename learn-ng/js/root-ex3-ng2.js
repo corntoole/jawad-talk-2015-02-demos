@@ -51,7 +51,7 @@ export class NgClass {
 export class RedDec {
   constructor(element:NgElement) {
     this.element = element;
-    this.element.style.color = 'red';
+    this.element.color = 'red';
   }
 }
 // @Decorator({
